@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: grid;
+    grid-template: "logo-principal menu-principal empty"
+                    "logo-principal  div-busqueda empty"/
+                    4fr              8fr          1fr;
+}
+.logo-principal{
+    grid-area: logo-principal;
+    width: 160px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.menu-style-visible{
+    color: blue;
+    position: fixed;
+    margin-top: 25px;
+}
+.menu-barra { 
+    visibility: hidden;
+    position: fixed;
+    font-size: 2em;
+    margin-right: 25px;
+}
+.menu-horizontal{
+    grid-area: menu-principal;
+    margin-top: 25px;
+    text-align: left;
+}
+li{
+    background-color: rgb(238,174,64);
+    display: inline-block;
+    font-size: 1.4em;
+    color: white;
+    margin:15px;
+    padding: 10px 25px;
+    border-radius: 40px;
+    list-style: none;
+}
+a{
+    color:rgb(48, 48, 48,.8);
+    font-weight: 900;
+    text-decoration: none;
+}
+.div-busqueda{
+    grid-area: div-busqueda;
+}
+.icono-lupa-style{
+    width:25px;
+}
+.title{
+    width:100%;
+    height:50px;
+    background-color:rgb(217,117,65);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 20px;
+    color:white;
+}
+.input-busqueda-style{
+    margin: 12px 15px;
+    width: 75%;
+    height: 30px;
+}
+.content{
+    display: grid;
+    height:350px;
+    grid-template: "productos-dia  lo-mas-vendido" /
+                    2fr            1fr ;
+}
+.productos-dia{
+    grid-area: productos-dia;
+    background-color: rgb(238,174,64) ;
+    width:80%;
+    height:300px;
+    margin: 0 0 30px 45px ;
+    display: grid;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    grid-template:"titulo-productos-dia  titulo-productos-dia  titulo-productos-dia" 35px
+                    "img-lulo            img-yuca              img-bulto-cafe" auto / 
+                    1fr                   1fr                  1fr;
+}
+.titulo-productos-dia{
+    grid-area: titulo-productos-dia;
+    font-size: 1.8em;
+    text-align: left;
+    color: rgb(24, 24,24,.9);
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.img-lulo{
+    grid-area:img-lulo;
+    width: 80%;
+    margin: 15px 30px;
+}
+.img-yuca{
+    grid-area:img-yuca;
+    width: 80%;
+    margin: 15px 30px;
+}
+.img-bulto-cafe{
+    grid-area:img-bulto-cafe;
+    width: 80%;
+    margin: 15px 30px;
+}
+
+.lo-mas-vendido{
+    grid-area: lo-mas-vendido;
+    width:80%;
+    height:300px;
+    margin: 0 60px 30px 0;
+    display: grid;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 30px;
+}
+.titulo-mas-vendido{
+    height: 30px;
+    background-color: rgb(238,174,64);
+    width: 30px;
+    display: inline-block;
+    color: white;
+    z-index: 10;
+
+}
+.img-platano{
+    margin-top: -30px;
+    
+    width:100%;
+    height:300px;
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:40px; 
+    background-color: blue;
+}
+.pie_pagina_style{
+    background-color:rgb(217,117,65);
+    border-top-left-radius: 40px;
+    border-top-right-radius:40px;
+    width:100%;
+    height:65px;
+}
+h3{
+    font-size:1em;
+    text-align: center;
+
+}
+input{
+    border-radius:20px;
+    background-color:white;
+    display: inline-block;
+    color:black;
+    padding: 4px;
+    margin-left: 50px;
+}
+@media only screen and (max-width: 1135px){
+    nav {
+        position: fixed;
+        height: 100vh;
+        background-color: white;
+    }
+    .menu-barra{
+        visibility: visible;
+        position: fixed;
+        width: 200px;
+        right: 10px;
+        top: 25px;
+        cursor: pointer;
+    }
+
+    .menu-vertical{
+        margin: 0;
+        margin-top: 70px;
+        position: fixed;
+        width: 80%;
+    }
+    .menu-vertical > li {
+        background-color: white;
+        display: block;
+        border-radius: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-bottom: 1px solid rgb(48,48,48,.8);
+        text-align: center;
+    }
+    .nav-corto{
+        height: 70px;
+        /* background-color: red; */
+    }
+    .menu-vertical-oculto{
+        display: none;
+    }
+    .menu-horizontal{
+        display: none;
+    }.icono-lupa-style{
+        display: none;
+    }.input-busqueda-style{
+        display: none;
+    }
+    .title{
+        margin-top: 50px;
+    }
+}
